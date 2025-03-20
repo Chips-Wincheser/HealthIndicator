@@ -4,28 +4,21 @@ using UnityEngine.UI;
 
 public class SliderHealthView : MonoBehaviour
 {
-    [SerializeField] private Health _health;
+    [SerializeField] private Health _healthPlayer;
     [SerializeField] private Slider _smoothSlider;
     [SerializeField] private Slider _slider;
     [SerializeField] private float _smoothSpeed = 30f;
 
     private float _targetHealth = 100;
-    private WaitForSeconds _waitForSeconds;
-    private float _delay;
 
     private void OnEnable()
     {
-        _health.HealthUpdated += UpdateCounterDisplay;
+        _healthPlayer.HealthUpdated += UpdateCounterDisplay;
     }
 
     private void OnDisable()
     {
-        _health.HealthUpdated -= UpdateCounterDisplay;
-    }
-
-    private void Start()
-    {
-        _waitForSeconds = new WaitForSeconds(_delay);
+        _healthPlayer.HealthUpdated -= UpdateCounterDisplay;
     }
 
     private void UpdateCounterDisplay(float health)
@@ -44,8 +37,6 @@ public class SliderHealthView : MonoBehaviour
 
     private IEnumerator SmoothHealthChange()
     {
-        yield return _waitForSeconds;
-
         while (_smoothSlider.value != _targetHealth)
         {
             _smoothSlider.value = Mathf.MoveTowards(_smoothSlider.value, _targetHealth, _smoothSpeed * Time.deltaTime);

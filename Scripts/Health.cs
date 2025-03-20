@@ -30,8 +30,11 @@ public class Health : MonoBehaviour
 
     public void Treatment(int healingAmount)
     {
-        _currentHealth = Mathf.Clamp(_currentHealth + healingAmount, 0, _maxHealth);
-        HealthUpdated?.Invoke(_currentHealth);
+        if(healingAmount>0)
+        {
+            _currentHealth = Mathf.Clamp(_currentHealth + healingAmount, 0, _maxHealth);
+            HealthUpdated?.Invoke(_currentHealth);
+        }
     }
 
     private void Die()
