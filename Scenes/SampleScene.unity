@@ -1163,13 +1163,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1180794350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf23d3d9c0eb3ad4fb1df36c2ed48d28, type: 3}
+  m_Script: {fileID: 11500000, guid: c8997c883bab5b64a9811cf1d697dc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 1161045779}
-  _smoothSlider: {fileID: 0}
-  _slider: {fileID: 1180794353}
-  _smoothSpeed: 30
+  _healthPlayer: {fileID: 1161045779}
 --- !u!1 &1260238221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1468,7 +1465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _counterText: {fileID: 1577653163}
-  _health: {fileID: 1161045779}
+  _healthPlayer: {fileID: 1161045779}
 --- !u!1 &1663299094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,12 +2051,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2128215095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf23d3d9c0eb3ad4fb1df36c2ed48d28, type: 3}
+  m_Script: {fileID: 11500000, guid: aacaec83b847c104fbb8fd64e26df2b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: {fileID: 1161045779}
-  _smoothSlider: {fileID: 2128215097}
-  _slider: {fileID: 0}
+  _healthPlayer: {fileID: 1161045779}
   _smoothSpeed: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
