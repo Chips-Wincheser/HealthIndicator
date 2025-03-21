@@ -1167,6 +1167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthPlayer: {fileID: 1161045779}
+  _slider: {fileID: 1180794353}
 --- !u!1 &1260238221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1464,8 +1465,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943384531a064594081b41c8dfc7f099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _counterText: {fileID: 1577653163}
   _healthPlayer: {fileID: 1161045779}
+  _counterText: {fileID: 1577653163}
 --- !u!1 &1663299094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2055,6 +2056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthPlayer: {fileID: 1161045779}
+  _slider: {fileID: 2128215097}
   _smoothSpeed: 30
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

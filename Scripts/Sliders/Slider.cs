@@ -1,20 +1,16 @@
 using UnityEngine;
 
-public abstract class Slider : MonoBehaviour
+[RequireComponent(typeof(UnityEngine.UI.Slider))]
+public class Slider : HealthViewBase
 {
-    [SerializeField] protected Health _healthPlayer;
+    [SerializeField] protected UnityEngine.UI.Slider _slider;
 
     protected float _targetHealth = 100;
 
-    private void OnEnable()
+    private void Awake()
     {
-        _healthPlayer.HealthUpdated += UpdateCounterDisplay;
+        _slider = GetComponent<UnityEngine.UI.Slider>();
     }
 
-    private void OnDisable()
-    {
-        _healthPlayer.HealthUpdated -= UpdateCounterDisplay;
-    }
-
-    protected abstract void UpdateCounterDisplay(float health);
+    protected override void UpdateCounterDisplay(float health) { }
 }
