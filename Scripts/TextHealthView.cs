@@ -7,10 +7,7 @@ public class TextHealthView : HealthViewBase
     
     protected override void UpdateCounterDisplay(float health)
     {
-        if (_counterText != null)
-        {
-            health*=_healthPlayer.MaxHealth;
-            _counterText.text = health.ToString();
-        }
+        health*=_healthPlayer.MaxValue;
+        _counterText.text = health.ToString();
     }
 }

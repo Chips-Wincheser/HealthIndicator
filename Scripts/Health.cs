@@ -3,29 +3,24 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private float _currentHealth;
+    private float _currentValue;
 
-    public float MaxHealth {  get; private set; }
+    public float MaxValue {  get; private set; }
 
-    public event Action<float> HealthUpdated;
+    public event Action<float> Updated;
 
     private void Awake()
     {
-        MaxHealth  = 100;
-        _currentHealth = MaxHealth;
+        MaxValue  = 100;
+        _currentValue = MaxValue;
     }
 
     public void TakeDamage(int damage)
     {
-        if (damage>0)
+        if (damage>0 && _currentValue != 0)
         {
-            _currentHealth = Mathf.Clamp(_currentHealth - damage, 0, MaxHealth);
-            HealthUpdated?.Invoke(_currentHealth/MaxHealth);
-
-            if (_currentHealth == 0)
-            {
-                Die();
-            }
+            _currentValue = Mathf.Clamp(_currentValue - damage, 0, MaxValue);
+            Updated?.Invoke(_currentValue/MaxValue);
         }
     }
 
@@ -33,13 +28,8 @@ public class Health : MonoBehaviour
     {
         if(healingAmount>0)
         {
-            _currentHealth = Mathf.Clamp(_currentHealth + healingAmount, 0, MaxHealth);
-            HealthUpdated?.Invoke(_currentHealth/MaxHealth);
+            _currentValue = Mathf.Clamp(_currentValue + healingAmount, 0, MaxValue);
+            Updated?.Invoke(_currentValue/MaxValue);
         }
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
     }
 }
