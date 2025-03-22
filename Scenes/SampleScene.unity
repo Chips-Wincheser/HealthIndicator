@@ -443,8 +443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d88f8ec55675c4da3a1d51580be2c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _button: {fileID: 319556392}
-  _playerHealth: {fileID: 1161045779}
+  Button: {fileID: 319556392}
+  PlayerHealth: {fileID: 1161045779}
 --- !u!1 &394145396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,7 +1047,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa1c0ac72a8adad45bf0abaf486c9f17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxHealth: 100
 --- !u!4 &1161045780
 Transform:
   m_ObjectHideFlags: 0
@@ -1148,9 +1147,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1663299095}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1167,7 +1166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthPlayer: {fileID: 1161045779}
-  _slider: {fileID: 1180794353}
+  SliderHealth: {fileID: 1180794353}
 --- !u!1 &1260238221
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,7 +1375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 100/100
+  m_text: 100
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1810,8 +1809,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7340979701ac9b645a8c69dfdc2cdb36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _button: {fileID: 1923046522}
-  _playerHealth: {fileID: 1161045779}
+  Button: {fileID: 1923046522}
+  PlayerHealth: {fileID: 1161045779}
 --- !u!1 &1968583114
 GameObject:
   m_ObjectHideFlags: 0
@@ -2037,9 +2036,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1260238222}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 100
+  m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 100
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2056,8 +2055,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthPlayer: {fileID: 1161045779}
-  _slider: {fileID: 2128215097}
-  _smoothSpeed: 30
+  SliderHealth: {fileID: 2128215097}
+  _smoothSpeed: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

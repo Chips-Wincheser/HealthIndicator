@@ -10,19 +10,17 @@ public class SmoothSliderHealthView : Slider
 
     protected override void UpdateCounterDisplay(float health)
     {
-        _targetHealth = health;
-
         if(_currentCoroutine != null)
             StopCoroutine(_currentCoroutine);
 
-        _currentCoroutine=StartCoroutine(SmoothHealthChange());
+        _currentCoroutine=StartCoroutine(SmoothHealthChange(health));
     }
 
-    private IEnumerator SmoothHealthChange()
+    private IEnumerator SmoothHealthChange(float health)
     {
-        while (_slider.value != _targetHealth)
+        while (SliderHealth.value != health)
         {
-            _slider.value = Mathf.MoveTowards(_slider.value, _targetHealth, _smoothSpeed * Time.deltaTime);
+            SliderHealth.value = Mathf.MoveTowards(SliderHealth.value, health, _smoothSpeed * Time.deltaTime);
             yield return null;
         }
 

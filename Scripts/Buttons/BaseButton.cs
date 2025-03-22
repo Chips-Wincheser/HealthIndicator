@@ -3,17 +3,17 @@ using UnityEngine.UI;
 
 public abstract class BaseButton : MonoBehaviour
 {
-    [SerializeField] protected Button _button;
-    [SerializeField] protected Health _playerHealth;
+    [SerializeField] protected Button Button;
+    [SerializeField] protected Health PlayerHealth;
 
     private void OnEnable()
     {
-        _button.onClick.AddListener(HandleButtonClick);
+        Button.onClick.AddListener(HandleButtonClick);
     }
 
     private void OnDisable()
     {
-        _button.onClick.RemoveListener(HandleButtonClick);
+        Button.onClick.RemoveListener(HandleButtonClick);
     }
 
     protected abstract void HandleButtonClick();

@@ -9,6 +9,7 @@ public class TextHealthView : HealthViewBase
     {
         if (_counterText != null)
         {
+            health*=_healthPlayer.MaxHealth;
             _counterText.text = health.ToString();
         }
     }
